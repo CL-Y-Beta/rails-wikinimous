@@ -1,39 +1,52 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  max-width: 100%;
+}
 
- #navbar {
+#navbar {
   background-color: rgb(228, 228, 228);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 8px;
+  padding-bottom: -3px;
   margin: 0;
-  position:relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   border: 1px solid rgb(176, 176, 176);
   text-decoration: none;
- }
+  box-sizing: border-box; /* Add this line to include border and padding in the specified width */
+}
 
- #navbar h1 {
+#navbar a {
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+}
+
+#navbar h1 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
-  padding: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
 
- }
- #navbar p {
+#navbar p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 0.8 rem;
-  padding: 20px;
- }
+  font-size: 0.8rem;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.article-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.article-content {
+  padding-top: 15px;
+}

@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.save
+    redirect_to root_path
   end
 
   def update

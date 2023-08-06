@@ -2,10 +2,10 @@
 
 
 <% @articles.each do |article| %>
-  <p>
-  <b><%= link_to article.title, article %>
-  </b>
-  <br>
-  <%= article.content %>
+  <b><p class="lead"><%= link_to article.title, article %></p></b>
+  <p><%text = article.content %>
+  <% max_length = 150 %>
+  <% limited_text = text.slice(0, max_length) %>
+  <%= limited_text %>
   </p>
 <% end %>

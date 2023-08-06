@@ -1,11 +1,13 @@
 
-<p>
+<div class="d-flex">
+  <div class="col-10 d-inline article-title">
+    <p class="lead d-inline"><b><%= @article.title %></b></p>
+    <%= link_to "delete", delete_path(@article), method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "d-inline" %>
+    <%= link_to "edit", edit_path(@article), class: "d-inline" %>
+  </div>
+</div>
 
-<b><%= @article.title %></b>
+<p class="article-content"><%= @article.content %></p>
 
-<%= link_to "delete", delete_path(@article), method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </li>
-<%= link_to "edit", edit_path(@article) %>
 
-</p>
-
-<p><%= @article.content %></p>
+<%= link_to "Back", root_path %>
